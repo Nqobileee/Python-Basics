@@ -21,12 +21,12 @@ def main():
           
           For example, if the secret number was 248 and your guess was 843, clues would be Fermi Pico. '''.format(NUM_DIGITS))
     
-    # while loop is used to repeatedly execute a block of code as long as the condition is true
+# while loop is used to repeatedly execute a block of code as long as the condition is true
     while True: 
         secretNum = getSecretNum()
         print('I have thought of a number.')
 
-        # {} value was used again, meaning we are gonna get a value stated before
+# {} value was used again, meaning we are gonna get a value stated before
 
         print('You have {} guesses to get to it.'.format(MAX_GUESSES))
 
@@ -57,8 +57,8 @@ def getSecretNum():
 
     secretNum = ''
 
-    # for loop is best used when a number of iterations are known already like a list or a range
-    # Unlike a while loop typically used when the number of iterations isnt predetermined and depends on a condition being met
+# for loop is best used when a number of iterations are known already like a list or a range
+# Unlike a while loop typically used when the number of iterations isnt predetermined and depends on a condition being met
 
     for i in range(NUM_DIGITS):
         secretNum += str(numbers[i])
@@ -73,12 +73,12 @@ def getClues(guess, secretNum):
     for i in range(len(guess)):
         if guess[i] == secretNum[i]:
 
-            # append is used to add an item to the end of a list
+# append is used to add an item to the end of a list
             clues.append('Fermi')
         elif guess[i] in secretNum:
             clues.append('Pico')
         
-        # len is used to determine length of a list
+# len is used to determine length of a list
 
         if len(clues) == 0:
             return 'Bagels'
